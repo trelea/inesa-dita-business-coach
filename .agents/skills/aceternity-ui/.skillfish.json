@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "aceternity-ui",
+  "owner": "secondsky",
+  "repo": "claude-skills",
+  "path": "plugins/aceternity-ui/skills/aceternity-ui",
+  "branch": "main",
+  "sha": "eefbbc3017f193c255949a79c4e0c30b78fbfb3c",
+  "source": "manual"
+}

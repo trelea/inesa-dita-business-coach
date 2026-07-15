@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "next-devtools": {
+      "command": "npx",
+      "args": ["-y", "next-devtools-mcp@latest"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"],
+      "env": {
+        "CONTEXT7_API_KEY": "ctx7sk-43929f5e-9d25-439c-8ac0-a5e4deedf3c2"
+      }
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
+    },
+    "magicuidesign-mcp": {
+      "command": "npx",
+      "args": ["-y", "@magicuidesign/mcp@latest"]
+    },
+    "aceternityui": {
+      "command": "npx",
+      "args": ["aceternityui-mcp"]
+    }
+  }
+}

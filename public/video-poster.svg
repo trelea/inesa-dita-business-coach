@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="90%">
+      <stop offset="0%" stop-color="#3b3552"/>
+      <stop offset="55%" stop-color="#242138"/>
+      <stop offset="100%" stop-color="#1b1930"/>
+    </radialGradient>
+    <linearGradient id="skyline" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141221"/>
+      <stop offset="100%" stop-color="#0f0d1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <!-- dusk skyline silhouette -->
+  <path d="M0 720 L0 640 80 640 80 600 150 600 150 660 240 660 240 560 320 560 320 620 420 620 420 520 500 520 500 640 590 640 590 580 680 580 680 480 760 480 760 620 850 620 850 540 940 540 940 600 1030 600 1030 500 1120 500 1120 640 1210 640 1210 560 1300 560 1300 620 1390 620 1390 580 1480 580 1480 640 1600 640 1600 720 Z" fill="url(#skyline)" opacity="0.85"/>
+  <!-- lit windows -->
+  <g fill="#e8c968" opacity="0.75">
+    <rect x="332" y="576" width="8" height="8"/><rect x="352" y="592" width="8" height="8"/>
+    <rect x="692" y="500" width="8" height="8"/><rect x="712" y="524" width="8" height="8"/>
+    <rect x="700" y="548" width="8" height="8"/><rect x="1042" y="516" width="8" height="8"/>
+    <rect x="1062" y="540" width="8" height="8"/><rect x="1052" y="568" width="8" height="8"/>
+    <rect x="452" y="540" width="8" height="8"/><rect x="472" y="560" width="8" height="8"/>
+    <rect x="1232" y="576" width="8" height="8"/><rect x="862" y="556" width="8" height="8"/>
+  </g>
+  <rect width="1600" height="900" fill="none" stroke="#e8c968" stroke-opacity="0.35" stroke-width="2"/>
+  <text x="800" y="790" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="44" fill="#f5f2ea" opacity="0.9">Seen &amp; Paid</text>
+  <text x="800" y="836" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="19" letter-spacing="6" fill="#f5f2ea" opacity="0.55">A WORD FROM INESA — VIDEO COMING SOON</text>
+</svg>
