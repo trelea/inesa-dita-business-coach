@@ -1,6 +1,7 @@
-import { ImagePlaceholder } from "@/components/image-placeholder";
+import { InesaImage } from "@/components/inesa-image";
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/sections/section";
+import { photos } from "@/lib/images";
 
 // TODO: confirm with Inesa which credentials to highlight.
 const CREDENTIAL_BADGES = [
@@ -18,7 +19,9 @@ export function About() {
           {/* Inesa's own story — kept close to her words. */}
           <h2 className="font-heading text-3xl leading-tight md:text-4xl">
             I know what it feels like to{" "}
-            <span className="italic">start from the beginning.</span>
+            <span className="highlight-marker italic">
+              start from the beginning.
+            </span>
           </h2>
           <div className="mt-6 space-y-5 text-base leading-relaxed text-foreground/80 md:text-lg">
             <p>
@@ -54,8 +57,11 @@ export function About() {
           </div>
         </div>
         <figure className="mx-auto w-full max-w-sm md:max-w-none">
-          <ImagePlaceholder
-            label="Portrait — Pixieset"
+          <InesaImage
+            src={photos.aboutPortrait}
+            alt="Inesa Dita, seated portrait in a black suit"
+            treatment="warm"
+            sizes="(min-width: 768px) 40vw, 100vw"
             className="aspect-[3/4] w-full"
           />
           <figcaption className="mt-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">

@@ -11,9 +11,9 @@ coaching-program landing page). All copy in **English**. The whole site is one p
 
 - Display name: **Inesa Dita — Business Coach** (this exact name persists on the site)
 - No logo yet — use an **"ID" initials text mark** or a plain wordmark
-- Aesthetic: premium and minimal — "Bellevue at dusk" palette: deep violet-navy ink, warm paper, serif/sans mix (Fraunces + Geist), generous whitespace
-- **Yellow is the main accent color** (client requirement — instead of the reference site's red). Tokens: `gold` (bright, dark sections) and `ochre` (deep, light sections) in `app/(frontend)/globals.css`
-- Client photos: https://thirdviewfilms.pixieset.com/inesadita/ (Pixieset blocks bots — Marius downloads photos manually and adds them to the repo or Payload Media)
+- Aesthetic: premium and minimal — "wine and gold" palette (client-requested burgundy, July 2026): deep burgundy ink, warm paper, serif/sans mix (Fraunces + Geist), generous whitespace
+- **Yellow is the main accent color** (client requirement — instead of the reference site's red). Tokens: `gold` (bright, dark sections) and `ochre` (deep, light sections) in `app/(frontend)/globals.css`; `highlight-marker`/`highlight-underline` utilities for emphasized phrases (max one per section)
+- Client photos: curated shots from https://thirdviewfilms.pixieset.com/inesadita/ live in `public/images/` and are mapped to page slots in `lib/images.ts`; render via `components/inesa-image.tsx` (`warm`/`duotone` treatments). Full harvest (62 originals) can be re-downloaded from the gallery CDN if new crops are needed
 - Background context: Inesa is also a Pacific NW realtor ("PNW Realtor | Inesa Dita Willis")
 
 ## Page blueprint (adapted from the reference site)
@@ -50,7 +50,9 @@ name — from unseen and underpaid to **seen and paid**.
 
 ## Open items (blocked on client)
 
-- Client photos (manual download from Pixieset)
-- Booking/application link (Calendly or similar)
 - Real program details: length, price, weekly structure, deliverables — until provided,
   write placeholder copy adapted from the reference structure
+
+Booking is live: Calendly embed in `components/sections/book-call.tsx`
+(https://calendly.com/inesa-inesadita/intro-call); contact email Inesa@inesadita.com
+(`CONTACT_EMAIL` in `lib/site-config.ts`). All "Book your call" CTAs scroll to `#book`.

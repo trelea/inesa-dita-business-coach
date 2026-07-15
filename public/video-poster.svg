@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
   <defs>
     <radialGradient id="glow" cx="50%" cy="0%" r="90%">
-      <stop offset="0%" stop-color="#3b3552"/>
-      <stop offset="55%" stop-color="#242138"/>
-      <stop offset="100%" stop-color="#1b1930"/>
+      <stop offset="0%" stop-color="#55262e"/>
+      <stop offset="55%" stop-color="#3a161d"/>
+      <stop offset="100%" stop-color="#2b0f16"/>
     </radialGradient>
     <linearGradient id="skyline" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#141221"/>
-      <stop offset="100%" stop-color="#0f0d1a"/>
+      <stop offset="0%" stop-color="#220b11"/>
+      <stop offset="100%" stop-color="#1a080d"/>
     </linearGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#glow)"/>
-  <!-- dusk skyline silhouette -->
+  <!-- evening skyline silhouette -->
   <path d="M0 720 L0 640 80 640 80 600 150 600 150 660 240 660 240 560 320 560 320 620 420 620 420 520 500 520 500 640 590 640 590 580 680 580 680 480 760 480 760 620 850 620 850 540 940 540 940 600 1030 600 1030 500 1120 500 1120 640 1210 640 1210 560 1300 560 1300 620 1390 620 1390 580 1480 580 1480 640 1600 640 1600 720 Z" fill="url(#skyline)" opacity="0.85"/>
   <!-- lit windows -->
   <g fill="#e8c968" opacity="0.75">

@@ -5,10 +5,11 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import { InesaImage } from "@/components/inesa-image";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Separator } from "@/components/ui/separator";
 import { Section } from "@/components/sections/section";
-import { BOOKING_URL } from "@/lib/site-config";
+import { photos } from "@/lib/images";
 
 const STEPS: {
   number: string;
@@ -49,11 +50,20 @@ export function HowItWorks() {
                 <span className="font-heading text-4xl italic text-ochre">
                   {step.number}
                 </span>
-                <step.icon aria-hidden className="size-6 text-ochre/70" />
+                {step.number === "03" ? (
+                  <InesaImage
+                    src={photos.avatar}
+                    alt="Inesa Dita"
+                    sizes="56px"
+                    className="size-14 rounded-full ring-2 ring-gold/60"
+                  />
+                ) : (
+                  <step.icon aria-hidden className="size-6 text-ochre/70" />
+                )}
               </div>
               <h3 className="mt-4 font-heading text-2xl">
                 {step.number === "01" ? (
-                  <a href={BOOKING_URL} className="underline-offset-4 hover:underline">
+                  <a href="#book" className="underline-offset-4 hover:underline">
                     {step.title}
                   </a>
                 ) : (

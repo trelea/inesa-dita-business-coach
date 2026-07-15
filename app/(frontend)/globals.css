@@ -41,14 +41,14 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  /* Brand: "Bellevue at dusk" — deep violet-navy sky, warm paper, and gold
-     window light. Yellow is the client-required main accent (vs the
-     reference site's red). Gold = bright, for dark sections; ochre = deep,
-     for readable accents on paper. */
-  --color-dusk: oklch(0.27 0.045 295);
-  --color-dusk-deep: oklch(0.22 0.04 293);
-  --color-gold: oklch(0.85 0.145 92);
-  --color-ochre: oklch(0.55 0.105 80);
+  /* Brand: "wine and gold" — deep burgundy, warm paper, and gold candle
+     light. Yellow is the client-required main accent (vs the reference
+     site's red). Gold = bright, for dark sections; ochre = deep, for
+     readable accents on paper. */
+  --color-burgundy: oklch(0.32 0.09 20);
+  --color-burgundy-deep: oklch(0.25 0.075 18);
+  --color-gold: oklch(0.85 0.145 90);
+  --color-ochre: oklch(0.52 0.11 78);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -87,17 +87,17 @@
 
 :root {
   --background: oklch(0.977 0.004 85);
-  --foreground: oklch(0.25 0.025 295);
+  --foreground: oklch(0.26 0.03 20);
   --card: oklch(0.99 0.003 85);
-  --card-foreground: oklch(0.25 0.025 295);
+  --card-foreground: oklch(0.26 0.03 20);
   --popover: oklch(0.99 0.003 85);
-  --popover-foreground: oklch(0.25 0.025 295);
-  --primary: oklch(0.27 0.045 295);
+  --popover-foreground: oklch(0.26 0.03 20);
+  --primary: oklch(0.32 0.09 20);
   --primary-foreground: oklch(0.975 0.004 85);
   --secondary: oklch(0.945 0.007 85);
-  --secondary-foreground: oklch(0.27 0.045 295);
+  --secondary-foreground: oklch(0.32 0.09 20);
   --muted: oklch(0.945 0.007 85);
-  --muted-foreground: oklch(0.5 0.02 300);
+  --muted-foreground: oklch(0.5 0.025 25);
   --accent: oklch(0.95 0.04 95);
   --accent-foreground: oklch(0.5 0.09 80);
   --destructive: oklch(0.577 0.245 27.325);
@@ -123,11 +123,32 @@
 /* Signature device: hollow "ghost" type = unseen; solid type = seen. */
 @utility text-ghost-ink {
   color: transparent;
-  -webkit-text-stroke: 1.5px oklch(0.25 0.025 295 / 55%);
+  -webkit-text-stroke: 1.5px oklch(0.26 0.03 20 / 55%);
 }
 @utility text-ghost-paper {
   color: transparent;
   -webkit-text-stroke: 1.5px oklch(0.977 0.004 85 / 55%);
+}
+
+/* Yellow emphasis (client-required accent). Marker = gold swash under the
+   lower third of a phrase, for serif headings on paper; underline = gold
+   offset rule, for headings on burgundy. Max one highlight per section. */
+@utility highlight-marker {
+  padding-inline: 0.1em;
+  background: linear-gradient(
+    to top,
+    --alpha(var(--color-gold) / 40%) 0%,
+    --alpha(var(--color-gold) / 40%) 38%,
+    transparent 38%
+  );
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+@utility highlight-underline {
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-gold);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
 }
 
 @layer base {
@@ -138,6 +159,6 @@
     @apply bg-background text-foreground;
   }
   html {
-    @apply font-sans;
+    @apply scroll-smooth font-sans;
   }
 }

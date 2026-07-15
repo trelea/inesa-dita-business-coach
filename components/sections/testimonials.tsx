@@ -1,6 +1,9 @@
+import { InesaImage } from "@/components/inesa-image";
+import { BlurFade } from "@/components/ui/blur-fade";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Marquee } from "@/components/ui/marquee";
 import { Section } from "@/components/sections/section";
+import { photos } from "@/lib/images";
 
 // PLACEHOLDER quotes — replace with real client words from Inesa before
 // launch. Do not ship these.
@@ -31,6 +34,25 @@ export function Testimonials() {
       eyebrow="In their own words"
       title="Women who stopped waiting."
     >
+      <div className="mb-12 flex items-end justify-center gap-4 md:gap-6">
+        {photos.candids.map((candid, i) => (
+          <BlurFade key={i} inView delay={i * 0.1}>
+            <InesaImage
+              src={candid}
+              alt="Inesa Dita, candid moment from the brand shoot"
+              treatment="warm"
+              sizes="(min-width: 768px) 10rem, 7rem"
+              className={
+                i === 1
+                  ? "size-24 md:size-44"
+                  : i === 0
+                    ? "size-20 -rotate-2 md:size-36"
+                    : "size-20 rotate-2 md:size-36"
+              }
+            />
+          </BlurFade>
+        ))}
+      </div>
       <div className="relative">
         <Marquee pauseOnHover className="[--duration:45s]">
           {QUOTES.map((item, i) => (

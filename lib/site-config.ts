@@ -1,8 +1,9 @@
 export const SITE_NAME = "Inesa Dita — Business Coach";
 export const PROGRAM_NAME = "Seen & Paid";
 
-// TODO: replace with Inesa's real Cal.com booking link once her account exists.
-export const BOOKING_URL = "https://cal.com/inesadita";
+export const BOOKING_URL = "https://calendly.com/inesa-inesadita/intro-call";
+
+export const CONTACT_EMAIL = "Inesa@inesadita.com";
 
 export const HERO_VIDEO_URL = "https://www.youtube.com/embed/ecca3vfpmBI";
 

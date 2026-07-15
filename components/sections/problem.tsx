@@ -20,8 +20,9 @@ export function Problem() {
         </div>
         <BlurFade inView delay={0.15} className="self-center">
           <p className="font-heading text-2xl italic leading-snug text-foreground md:text-3xl">
-            Talent was supposed to be enough. It isn&apos;t. Being seen is a
-            skill — and skills can be learned.
+            Talent was supposed to be enough. It isn&apos;t.{" "}
+            <span className="highlight-marker">Being seen is a skill</span> —
+            and skills can be learned.
           </p>
         </BlurFade>
       </div>

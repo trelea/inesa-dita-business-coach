@@ -15,12 +15,12 @@ export function Method() {
   return (
     <Section
       id="method"
-      className="bg-dusk text-primary-foreground"
+      className="bg-burgundy text-primary-foreground"
       eyebrow="The method"
       title={
         <>
           Nine weeks. Three phases. One outcome:{" "}
-          <span className="italic">seen — and paid.</span>
+          <span className="italic text-gold">seen — and paid.</span>
         </>
       }
     >

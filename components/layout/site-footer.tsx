@@ -1,4 +1,9 @@
-import { INSTAGRAM_URL, PROGRAM_NAME, SITE_NAME } from "@/lib/site-config";
+import {
+  CONTACT_EMAIL,
+  INSTAGRAM_URL,
+  PROGRAM_NAME,
+  SITE_NAME,
+} from "@/lib/site-config";
 
 export function SiteFooter() {
   return (
@@ -12,6 +17,14 @@ export function SiteFooter() {
           </p>
         </div>
         <div className="text-sm text-muted-foreground md:text-right">
+          <p>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="underline-offset-4 transition-colors hover:text-foreground hover:underline"
+            >
+              {CONTACT_EMAIL}
+            </a>
+          </p>
           <a
             href={INSTAGRAM_URL}
             className="underline-offset-4 transition-colors hover:text-foreground hover:underline"
