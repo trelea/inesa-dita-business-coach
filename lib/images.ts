@@ -7,6 +7,7 @@ import candid2 from "@/public/images/candid-2.webp";
 import candid3 from "@/public/images/candid-3.webp";
 import finalCtaBg from "@/public/images/final-cta-bg.webp";
 import forHer from "@/public/images/for-her.webp";
+import heroBg from "@/public/images/hero-bg.webp";
 import photoBand from "@/public/images/photo-band.webp";
 
 /**
@@ -15,6 +16,9 @@ import photoBand from "@/public/images/photo-band.webp";
  * import here — sections never reference image files directly.
  */
 export const photos = {
+  /** Hero background — reclined on the black couch under the window band;
+      shown duotone under the burgundy scrim, so it needs the shadow depth. */
+  heroBg,
   /** About — 3:4 portrait, hand on chin, direct gaze. */
   aboutPortrait,
   /** ForHer — 4:5, seated on the yellow stool (echoes the gold accent). */

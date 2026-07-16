@@ -25,12 +25,12 @@ export default function Home() {
         <Hero />
         <Stats />
         <SocialProof />
+        <About />
         <Problem />
         <ForHer />
         <Method />
         <Included />
         <PhotoBand src={photos.photoBand} alt="Inesa Dita in a bright studio" word="visible" />
-        <About />
         <Testimonials />
         <Qualification />
         <Faq />

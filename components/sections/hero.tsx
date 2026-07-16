@@ -1,13 +1,29 @@
 import { CalendarCheck } from "lucide-react";
 
+import { HeroCredential } from "@/components/hero-credential";
+import { InesaImage } from "@/components/inesa-image";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Button } from "@/components/ui/button";
+import { photos } from "@/lib/images";
 import { HERO_VIDEO_URL } from "@/lib/site-config";
 
 export function Hero() {
   return (
     <section className="relative flex min-h-svh flex-col overflow-hidden bg-burgundy-deep text-primary-foreground md:h-svh md:min-h-0">
+      {/* Full-bleed on mobile, where nothing covers her. On desktop the video
+          owns the centre, so she moves to the right margin and is masked into
+          the burgundy rather than cropped against it. */}
+      <InesaImage
+        src={photos.heroBg}
+        alt=""
+        fill
+        treatment="duotone"
+        sizes="(min-width: 768px) 50vw, 100vw"
+        priority
+        className="absolute inset-y-0 right-0 w-full md:w-[46%] md:[mask-image:linear-gradient(to_right,transparent_0%,black_62%)] [&_img]:[object-position:50%_18%]"
+      />
+      <div aria-hidden className="absolute inset-0 bg-burgundy-deep/60" />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(70rem_35rem_at_50%_-10%,oklch(0.72_0.1_75_/_20%),transparent)]"
@@ -27,7 +43,7 @@ export function Hero() {
             </span>{" "}
             —
             nine weeks of 1:1 coaching for women ready to own their value,
-            become visible, and get paid like it.
+            become visible, and get paid.
           </p>
         </BlurFade>
         <BlurFade delay={0.3}>
@@ -48,9 +64,9 @@ export function Hero() {
         </BlurFade>
         <BlurFade
           delay={0.45}
-          className="relative mt-6 flex w-full items-start justify-center md:min-h-0 md:flex-1"
+          className="relative mt-6 flex w-full flex-col items-center justify-center md:min-h-0 md:flex-1"
         >
-          <div className="aspect-video w-full max-w-full overflow-hidden rounded-2xl ring-1 ring-primary-foreground/15 md:h-full md:max-h-[28rem] md:w-auto">
+          <div className="aspect-video w-full max-w-full overflow-hidden rounded-2xl ring-1 ring-primary-foreground/15 md:min-h-0 md:max-h-[28rem] md:w-auto md:flex-1">
             <iframe
               src={HERO_VIDEO_URL}
               title="Inesa Dita introduces Seen & Paid"
@@ -59,6 +75,7 @@ export function Hero() {
               allowFullScreen
             />
           </div>
+          <HeroCredential className="mt-4 shrink-0" />
         </BlurFade>
       </div>
     </section>
