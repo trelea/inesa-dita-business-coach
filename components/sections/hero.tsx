@@ -1,6 +1,5 @@
 import { CalendarCheck } from "lucide-react";
 
-import { HeroCredential } from "@/components/hero-credential";
 import { InesaImage } from "@/components/inesa-image";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { BlurFade } from "@/components/ui/blur-fade";
@@ -75,7 +74,6 @@ export function Hero() {
               allowFullScreen
             />
           </div>
-          <HeroCredential className="mt-4 shrink-0" />
         </BlurFade>
       </div>
     </section>
