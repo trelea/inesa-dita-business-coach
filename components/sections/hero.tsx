@@ -1,11 +1,11 @@
-import { CalendarCheck } from "lucide-react";
+import { CalendarCheck, Clapperboard } from "lucide-react";
 
 import { InesaImage } from "@/components/inesa-image";
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Button } from "@/components/ui/button";
 import { photos } from "@/lib/images";
-import { HERO_VIDEO_URL } from "@/lib/site-config";
 
 export function Hero() {
   return (
@@ -65,14 +65,32 @@ export function Hero() {
           delay={0.45}
           className="relative mt-6 flex w-full flex-col items-center justify-center md:min-h-0 md:flex-1"
         >
-          <div className="aspect-video w-full max-w-full overflow-hidden rounded-2xl ring-1 ring-primary-foreground/15 md:min-h-0 md:max-h-[28rem] md:w-auto md:flex-1">
-            <iframe
-              src={HERO_VIDEO_URL}
-              title="Inesa Dita introduces Seen & Paid"
-              className="size-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
+          <div
+            role="img"
+            aria-label="Inesa's intro video is coming soon"
+            className="relative aspect-video w-full max-w-full overflow-hidden rounded-2xl bg-burgundy ring-1 ring-primary-foreground/15 md:min-h-0 md:max-h-[28rem] md:w-auto md:flex-1"
+          >
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(60rem_30rem_at_50%_-20%,oklch(0.72_0.1_75_/_28%),transparent)]"
             />
+            <div className="relative flex size-full flex-col items-center justify-center gap-4 px-6 text-center">
+              <div className="relative flex size-16 items-center justify-center">
+                <span
+                  aria-hidden
+                  className="absolute inset-0 animate-pulse rounded-full bg-gold/25 blur-md"
+                />
+                <span className="relative flex size-16 items-center justify-center rounded-full ring-1 ring-gold/40">
+                  <Clapperboard aria-hidden className="size-7 text-gold" />
+                </span>
+              </div>
+              <AnimatedShinyText className="font-heading text-2xl text-gold/60 via-gold md:text-3xl [--shiny-width:120px]">
+                Her story is coming soon
+              </AnimatedShinyText>
+              <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/55">
+                Inesa in her own words · filming now
+              </p>
+            </div>
           </div>
         </BlurFade>
       </div>

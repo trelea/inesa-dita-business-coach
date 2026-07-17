@@ -5,8 +5,6 @@ export const BOOKING_URL = "https://calendly.com/inesa-inesadita/intro-call";
 
 export const CONTACT_EMAIL = "Inesa@inesadita.com";
 
-export const HERO_VIDEO_URL = "https://www.youtube.com/embed/ecca3vfpmBI";
-
 export const INSTAGRAM_URL = "https://www.instagram.com/inesadita/";
 
 export const PHASES = [
